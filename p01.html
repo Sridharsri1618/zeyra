@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="classy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="logo.png" width="130" height="130" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+<div class="product-container">
+  <!-- Product Image Gallery -->
+  <div class="product-images">
+    <img id="mainImage" src="img/whitejean.webp" alt="Shirt" class="main-img">
+    <div class="thumbnail-row">
+      <img src="img/blackjean.webp" onclick="changeImage(this)" class="thumb">
+      <img src="img/bluejean.webp" onclick="changeImage(this)" class="thumb">
+      <img src="img/greenjean.webp" onclick="changeImage(this)" class="thumb">
+      <img src="img/beakjean.webp" onclick="changeImage(this)" class="thumb">
+    </div>
+  </div>
+
+  <!-- Product Details -->
+  <div class="product-details">
+    <p class="breadcrumb">Shop / Jeans</p>
+    <h2>Men's Fashion Jeans</h2>
+    <h3>₹999.00</h3>
+
+    <select id="size">
+      <option disabled selected>Select Size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+    </select>
+
+    <div class="qty-add">
+      <input type="number" id="quantity" value="1" min="1">
+      <button onclick="addToCart()">Add To Cart</button>
+    </div>
+
+    <h4>Product Details</h4>
+    <p class="gav">Upgrade your wardrobe with our stylish range of jeans crafted for comfort and durability. Our collection includes a variety of trendy shades and textures such as <strong> beak jeans, black jeans, bro jeans, blue jeans, crack black jeans, crack blue jeans, green jeans, light jeans, ton black jeans, ton blue jeans, ton green jeans, and white jeans.</strong> Whether you prefer a bold dark tone or a subtle light wash, these jeans are designed to suit every style. Perfect for casual outings or everyday wear, each piece offers a modern fit and high-quality finish to keep you looking sharp and feeling confident.</p>
+  </div> 
+</div>
+
+<div class="eco">
+         <h1>Classic Fits</h1>
+    </div>
+
+    <div class="container">
+  <div class="product-card">
+  <div class="image-container">
+    <img src="img/whitejean.webp" class="front" alt="Shirt Front">
+    <img src="img/whitejean2.webp" class="back" alt="Shirt Back">
+    <span class="tag">Sale</span>
+  </div>
+  <div class="info">
+    <h3>Snow Drift White Jeans</h3>
+  <p><del>Rs. 1,999.00</del> <span style="color: green;">999.00 <a href="cart.html" onclick='addToCart("Snow Drift White Jeans", "img/whitejean.webp", 999.00)' style="color: green;">
+    <i class="fas fa-shopping-cart"></i>
+  </a></span></p>
+  <a href="shop.html" class="btn">Buy Now</a>
+  </div>
+</div>  
+
+<div class="product-card">
+  <div class="image-container">
+    <img src="img/bluejean.webp" class="front" alt="Shirt Front">
+    <img src="img/bluejean2.webp" class="back" alt="Shirt Back">
+    <span class="tag">Sale</span>
+  </div>
+  <div class="info">
+    <h3>Ocean Fade Slim Fit Jeans</h3>
+  <p><del>Rs. 1,999.00</del> <span style="color: green;">999.00 <a href="cart.html" onclick='addToCart("Ocean Fade Slim Fit Jeans", "img/bluejean.webp", 999.00)' style="color: green;">
+    <i class="fas fa-shopping-cart"></i>
+  </a></span></p>
+  <a href="shop.html" class="btn">Buy Now</a>
+  </div>
+</div> 
+
+<div class="product-card">
+  <div class="image-container">
+    <img src="img/tonblack.webp" class="front" alt="Shirt Front">
+    <img src="img/tonblack2.webp" class="back" alt="Shirt Back">
+    <span class="tag">Sale</span>
+  </div>
+  <div class="info">
+    <h3>Urban Black Distress Jeans</h3>
+  <p><del>Rs. 1,999.00</del> <span style="color: green;">999.00 <a href="cart.html" onclick='addToCart("Urban Black Distress Jeans", "img/tonblack.webp", 999.00)' style="color: green;">
+    <i class="fas fa-shopping-cart"></i>
+  </a></span></p>
+  <a href="shop.html" class="btn">Buy Now</a>
+  </div>
+</div> 
+
+<div class="product-card">
+  <div class="image-container">
+    <img src="img/tonblue.webp" class="front" alt="Shirt Front">
+    <img src="img/tonblue2.webp" class="back" alt="Shirt Back">
+    <span class="tag">Sale</span>
+  </div>
+  <div class="info">
+    <h3>Skyline Indigo Cargo Jeans</h3>
+  <p><del>Rs. 1,999.00</del> <span style="color: green;">999.00 <a href="cart.html" onclick='addToCart("Skyline Indigo Cargo Jeans", "img/tonblue2.webp", 999.00)' style="color: green;">
+    <i class="fas fa-shopping-cart"></i>
+  </a></span></p>
+  <a href="shop.html" class="btn">Buy Now</a>
+  </div>
+</div>
+
+
+
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Lato', sans-serif;
+        }
+
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 80px;
+            height: 120px;
+            background: #e3e6f3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navbar li {
+            list-style: none;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        #navbar li a:hover,
+        #navbar li a.active {
+            color: #088178;
+        }
+
+        #navbar li a.active::after,
+        #navbar li a:hover::after {
+            content: "";
+            width: 30%;
+            height: 2px;
+            background: #088178;
+            position: absolute;
+            bottom: -4px;
+            left: 20px;
+        }
+
+
+.product-container {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.product-images {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.main-img {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.thumbnail-row {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  width: 92px;
+  height: 130px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thumb:hover {
+  border-color: teal;
+}
+
+.product-details {
+  flex: 1;
+  max-width: 500px;
+}
+
+.gav{
+    font-size: 17px;
+    margin: auto;
+}
+
+.breadcrumb {
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-details h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.product-details h3 {
+  font-size: 20px;
+  color: #222;
+}
+
+.product-details h4{
+    margin-top: 29px;
+    margin-bottom: 12px;
+}
+
+select,
+input[type="number"] {
+  padding: 8px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.qty-add {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-add button {
+  padding: 10px 20px;
+  background-color: teal;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.qty-add button:hover {
+  background-color: darkcyan;
+}
+
+.eco h1{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+    
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding: 30px;
+  margin-top: 0px;
+}
+
+.product-card {
+  width: 250px;
+  height: 420px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+img.back {
+  opacity: 0;
+}
+
+.image-container:hover img.front,
+.image-container.touch img.front {
+  opacity: 0;
+}
+
+.image-container:hover img.back,
+.image-container.touch img.back {
+  opacity: 1;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.info h3 {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.info h3 a {
+  text-decoration: none;
+  color: #333;
+}
+
+.info p {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 17px;
+}
+
+.info .fa-shopping-cart {
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+.joy {
+  width: 250px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 300px;
+}
+
+.feature-box i {
+  font-size: 30px;
+  color: #000;
+  margin-top: 5px;
+}
+
+.feature-box h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.feature-box p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.page-btn {
+  background-color: #00796b;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 18px;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-btn:hover {
+  background-color: #004d40;
+}
+
+.product-card .btn {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+</style>
+<script>
+    function changeImage(imgElement) {
+  document.getElementById("mainImage").src = imgElement.src;
+}
+
+function addToCart() {
+  const size = document.getElementById("size").value;
+  const quantity = parseInt(document.getElementById("quantity").value);
+
+  if (!size || size === "Select Size") {
+    alert("Please select a size.");
+    return;
+  }
+
+  const product = {
+    name: "Men's Fashion T Shirt",
+    price: 139,
+    quantity: quantity,
+    size: size,
+    img: document.getElementById("mainImage").src
+  };
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Product added to cart!");
+}
+
+</script>
+</body>
+</html>
